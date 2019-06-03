@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:divider="@android:drawable/divider_horizontal_dark" android:layout_margin="24dp"
+>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <Switch
+                    android:text="Licht"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/switch14" android:textSize="24sp"
+                    android:textOff="is aus" android:textOn="is an"
+                    android:padding="24dp"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider"/>
+            <Switch
+                    android:text="Ventilator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/switch12" android:textSize="24sp"
+                    android:textOff="is aus" android:textOn="is an"
+                    android:padding="24dp"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider"/>
+            <Switch
+                    android:text="Umluftventilator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/switch9" android:textSize="24sp"
+                    android:textOff="is aus" android:textOn="is an"
+                    android:padding="24dp"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider"/>
+
+            <Switch
+                    android:text="Luftentfeuchter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/switch11" android:textSize="24sp"
+                    android:textOff="is aus" android:textOn="is an"
+                    android:padding="24dp"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" android:id="@+id/view"/>
+            <Switch
+                    android:text="Luftbefeuchter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/switch1" android:textSize="24sp"
+                    android:textOff="is aus" android:textOn="is an"
+                    android:padding="24dp"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider"/>
+            <Switch
+                    android:text="Bewässerung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/switch13" android:textSize="24sp"
+                    android:textOff="is aus" android:textOn="is an"
+                    android:padding="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
