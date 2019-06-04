@@ -3,7 +3,7 @@ package com.example.hbox.history.dataSetStyler
 import android.graphics.Color
 import com.github.mikephil.charting.data.LineDataSet
 
-class TemperaturDataSetStyler {
+class TemperatureDataSetStyler {
     companion object {
         fun styleDataSet (lineDataSet : LineDataSet) : LineDataSet {
             return lineDataSet.apply{

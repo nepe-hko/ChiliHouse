@@ -2,14 +2,14 @@ package com.history
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import com.example.hbox.history.axisStyler.HumidityAxisStyler
 import com.example.hbox.history.axisStyler.TemperatureAxisStyler
-import com.example.hbox.history.dataSetStyler.TemperaturDataSetStyler
+import com.example.hbox.history.dataSetStyler.HumidityDataSetStyler
+import com.example.hbox.history.dataSetStyler.TemperatureDataSetStyler
 import com.example.hbox.history.limitLinesFormatter.WeekdayLimitLinesCreator
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.Entry
@@ -33,15 +33,29 @@ class ChartListViewAdapter(private val context: Context, private val sensorList:
         sensorList[position].data?.forEach {
             entries.add(Entry(it.date.toFloat(), it.value))
         }
-
-        // style dataset
         val lineDataSet = LineDataSet(entries, sensorList[position].name)
-        TemperaturDataSetStyler.styleDataSet(lineDataSet)
 
-        // style axis
-        TemperatureAxisStyler.styleXAxis(view.xAxis)
-        TemperatureAxisStyler.styleYAxisLeft(view.axisLeft)
-        TemperatureAxisStyler.styleYAxisRight(view.axisRight)
+        when(sensorList[position].type) {
+            "temperature" -> {
+                // style dataset
+                TemperatureDataSetStyler.styleDataSet(lineDataSet)
+
+                // style axis
+                TemperatureAxisStyler.styleXAxis(view.xAxis)
+                TemperatureAxisStyler.styleYAxisLeft(view.axisLeft)
+                TemperatureAxisStyler.styleYAxisRight(view.axisRight)
+            }
+            "humidity" -> {
+                // style dataset
+                HumidityDataSetStyler.styleDataSet(lineDataSet)
+
+                // style axis
+                HumidityAxisStyler.styleXAxis(view.xAxis)
+                HumidityAxisStyler.styleYAxisLeft(view.axisLeft)
+                HumidityAxisStyler.styleYAxisRight(view.axisRight)
+            }
+        }
+
 
         // add weekdays
         WeekdayLimitLinesCreator.create(view.xAxis, sensorList[position])

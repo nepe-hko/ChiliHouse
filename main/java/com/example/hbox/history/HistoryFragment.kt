@@ -13,7 +13,6 @@ import com.google.gson.Gson
 import com.history.ChartListViewAdapter
 import com.history.History
 import com.history.Sensor
-import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
 
