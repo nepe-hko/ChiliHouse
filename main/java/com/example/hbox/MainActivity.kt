@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         historyFragment = HistoryFragment()
         settingsFragment = SettingsFragment()
 
-        replaceFragment(HomeFragment())
+        replaceFragment(homeFragment)
     }
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->

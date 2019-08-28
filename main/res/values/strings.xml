@@ -1,4 +1,8 @@
 <resources>
+
+    <!-- stitch -->
+    <string name="my_app_id">box420app-ehwav</string>
+
     <string name="app_name">HBox</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>

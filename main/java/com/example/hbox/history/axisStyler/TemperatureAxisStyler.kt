@@ -33,10 +33,10 @@ class TemperatureAxisStyler {
                 textSize = 14f
                 valueFormatter = TemperatureFormatter()
                 axisMinimum = 16f
-                axisMaximum = 32f
+                axisMaximum = 36f
                 setDrawGridLines(true)
                 gridColor = Color.DKGRAY
-                setLabelCount(9,true)
+                setLabelCount(11,true)
 
             }
         }
